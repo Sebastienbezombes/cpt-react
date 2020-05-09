@@ -5,7 +5,7 @@
  */
 
 import React, {Component, Fragment} from 'react';
-import './Button.css';
+import './Buttons.css';
 
 export class ButtonAdd extends Component {
     constructor(props) {
@@ -41,3 +41,36 @@ export class ButtonLess extends Component {
     }
 }
 
+export class ButtonDiv extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            value: "/"
+        };
+    }
+    render() {
+
+        return(
+            <Fragment>
+                <button className="btnDiv">{this.state.value}</button>
+            </Fragment>
+        )
+    }
+}
+
+export class ButtonMult extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            value: "*"
+        };
+    }
+    render() {
+
+        return(
+            <Fragment>
+                <button className="btnMult">{this.state.value}</button>
+            </Fragment>
+        )
+    }
+}

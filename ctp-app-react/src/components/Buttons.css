@@ -15,3 +15,9 @@ button {
 .btnAdd:hover {
     color: greenyellow;
 }
+.btnMult:hover {
+    color: lightskyblue;
+}
+.btnDiv:hover {
+    color: orange;
+}

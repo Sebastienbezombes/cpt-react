@@ -6,6 +6,7 @@
 
 import React, {Component, Fragment} from 'react';
 import './Buttons.css';
+import Number from './Number';
 
 export class ButtonAdd extends Component {
     constructor(props) {
@@ -14,11 +15,16 @@ export class ButtonAdd extends Component {
             value: "+"
         };
     }
-    render() {
 
+    clickAdd = () => {
+        console.error('dfdhus');
+        
+    }
+
+    render() {
         return(
             <Fragment>
-                <button className="btnAdd">{this.state.value}</button>
+                <button className="btnAdd" onClick={this.clickAdd}>{this.state.value}</button>
             </Fragment>
         )
     }

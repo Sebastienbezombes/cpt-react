@@ -11,14 +11,14 @@ class Number extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            value: "+"
+            value: "0"
         };
     }
     render() {
 
         return(
             <Fragment>
-                <h1 className="number">0</h1>
+                <h1 className="number">{this.state.value}</h1>
             </Fragment>
         )
     }

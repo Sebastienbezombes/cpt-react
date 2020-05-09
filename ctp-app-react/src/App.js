@@ -1,17 +1,22 @@
 import React, { Component, Fragment } from 'react';
 import './reset.css';
+import './App.css';
 import {ButtonAdd, ButtonLess, ButtonDiv, ButtonMult} from './components/Buttons';
+import Number from './components/Number';
 
 class App extends Component {
   render() {
     return (
-      <Fragment>
-        <h1>0</h1>
-        <ButtonAdd/>
-        <ButtonLess/>
-        <ButtonDiv/>
-        <ButtonMult/>
-      </Fragment>
+      <div className="document">
+        <Number/>
+        <div className="buttonsList">
+          <ButtonDiv/>
+          <ButtonLess/>
+          <ButtonAdd/>
+          <ButtonMult/>
+        </div>
+
+      </div>
     );
   }
 }

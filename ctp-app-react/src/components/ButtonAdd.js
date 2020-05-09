@@ -7,7 +7,7 @@
 import React, {Component, Fragment} from 'react';
 import './Button.css';
 
-class Button extends Component {
+export class ButtonAdd extends Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -18,10 +18,26 @@ class Button extends Component {
 
         return(
             <Fragment>
-                <button className="btn">{this.state.value}</button>
+                <button className="btnAdd">{this.state.value}</button>
             </Fragment>
         )
     }
 }
 
-export default Button;
+export class ButtonLess extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            value: "-"
+        };
+    }
+    render() {
+
+        return(
+            <Fragment>
+                <button className="btnLess">{this.state.value}</button>
+            </Fragment>
+        )
+    }
+}
+

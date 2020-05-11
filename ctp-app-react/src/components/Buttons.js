@@ -15,12 +15,12 @@ export class ButtonAdd extends Component {
             value: "+"
         };
     }
-
     clickAdd = () => {
-        console.error('dfdhus');
-        
-    }
-
+        console.log("fff");
+        Number.props.setState = {
+            result: 1
+        }
+      }
     render() {
         return(
             <Fragment>

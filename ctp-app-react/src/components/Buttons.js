@@ -1,12 +1,6 @@
-/**
- * @author SebastienB
- * Licence
- * Button
- */
-
-import React, {Component, Fragment} from 'react';
+import React, {Component, Fragment, Children} from 'react';
 import './Buttons.css';
-import Number from './Number';
+import App from '../App';
 
 export class ButtonAdd extends Component {
     constructor(props) {
@@ -16,11 +10,8 @@ export class ButtonAdd extends Component {
         };
     }
     clickAdd = () => {
-        console.log("fff");
-        Number.props.setState = {
-            result: 1
-        }
-      }
+        this.props.addClick();
+    }
     render() {
         return(
             <Fragment>

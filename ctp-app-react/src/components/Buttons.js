@@ -27,11 +27,16 @@ export class ButtonLess extends Component {
             value: "-"
         };
     }
+
+    clickLess = () => {
+        this.props.lessClick();
+    }
+
     render() {
 
         return(
             <Fragment>
-                <button className="btnLess">{this.state.value}</button>
+                <button className="btnLess" onClick={this.clickLess}>{this.state.value}</button>
             </Fragment>
         )
     }

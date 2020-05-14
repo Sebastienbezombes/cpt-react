@@ -9,10 +9,15 @@ class App extends Component {
     cpt: 0
   }
 
+
+  clickLessValue = () => {
+    let less = this.state.cpt-=1
+    this.setState({
+      cpt: less
+    })
+  }
+
   clickAddValue = () => {
-    console.log(12345)
-    console.log(this.state.cpt)
-    //{this.state.cpt+=1}
     let add = this.state.cpt+=1
     this.setState({
       cpt: add
@@ -27,7 +32,7 @@ class App extends Component {
         
         <div className="buttonsList">
           <ButtonDiv/>
-          <ButtonLess/>
+          <ButtonLess lessClick={this.clickLessValue}/>
           <ButtonAdd addClick={this.clickAddValue}/>
           <ButtonMult/>
         </div>

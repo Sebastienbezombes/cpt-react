@@ -49,11 +49,16 @@ export class ButtonDiv extends Component {
             value: "/"
         };
     }
+
+    clickDiv = () => {
+        this.props.divClick();
+    }
+
     render() {
 
         return(
             <Fragment>
-                <button className="btnDiv">{this.state.value}</button>
+                <button className="btnDiv" onClick={this.clickDiv}>{this.state.value}</button>
             </Fragment>
         )
     }
@@ -66,11 +71,16 @@ export class ButtonMult extends Component {
             value: "*"
         };
     }
+
+    clickMult = () => {
+        this.props.multClick();
+    }
+
     render() {
 
         return(
             <Fragment>
-                <button className="btnMult">{this.state.value}</button>
+                <button className="btnMult" onClick={this.clickMult}>{this.state.value}</button>
             </Fragment>
         )
     }

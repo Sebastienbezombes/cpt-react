@@ -9,6 +9,12 @@ class App extends Component {
     cpt: 0
   }
 
+  clickDivValue = () => {
+    let divi = this.state.cpt/=2
+    this.setState({
+      cpt: divi
+    })
+  }
 
   clickLessValue = () => {
     let less = this.state.cpt-=1
@@ -24,6 +30,13 @@ class App extends Component {
     })
   }
 
+  clickMultValue = () => {
+    let mult = this.state.cpt*=2
+    this.setState({
+      cpt: mult
+    })
+  }
+
   render() {
     return (
       <div className="document">
@@ -31,10 +44,10 @@ class App extends Component {
           <h1 className="number">{this.state.cpt}</h1>
         
         <div className="buttonsList">
-          <ButtonDiv/>
+          <ButtonDiv divClick={this.clickDivValue}/>
           <ButtonLess lessClick={this.clickLessValue}/>
           <ButtonAdd addClick={this.clickAddValue}/>
-          <ButtonMult/>
+          <ButtonMult multClick={this.clickMultValue}/>
         </div>
 
       </div>

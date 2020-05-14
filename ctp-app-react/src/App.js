@@ -12,7 +12,11 @@ class App extends Component {
   clickAddValue = () => {
     console.log(12345)
     console.log(this.state.cpt)
-    {this.state.cpt+=1}
+    //{this.state.cpt+=1}
+    let add = this.state.cpt+=1
+    this.setState({
+      cpt: add
+    })
   }
 
   render() {
@@ -24,7 +28,7 @@ class App extends Component {
         <div className="buttonsList">
           <ButtonDiv/>
           <ButtonLess/>
-          <ButtonAdd addClick={this.clickAddValue.bind(this, App.cpt)}/>
+          <ButtonAdd addClick={this.clickAddValue}/>
           <ButtonMult/>
         </div>
 

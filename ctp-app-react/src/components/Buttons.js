@@ -1,6 +1,5 @@
-import React, {Component, Fragment, Children} from 'react';
+import React, {Component, Fragment} from 'react';
 import './Buttons.css';
-import App from '../App';
 
 export class ButtonAdd extends Component {
     constructor(props) {
